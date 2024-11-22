@@ -5,7 +5,11 @@ function calcAverageCalories(days) {
         totalCalories += inWeek.calories;
         
     };
-    return totalCalories / 7;
+  if (totalCalories > 0) {
+    return totalCalories / days.length;
+  } else { return 0; };
+  
+  
 };
 
 console.log(
